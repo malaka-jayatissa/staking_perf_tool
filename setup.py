@@ -13,7 +13,9 @@ setup(
         "numpy>=1.18.0",
         "boto3==1.34.113",
         "pyjwt==2.8.0",
-        "cryptography==42.0.8"
+        "cryptography==42.0.8",
+        "pandas==2.2.3",
+        "matplotlib==3.9.2",
     ],
     classifiers=[
         # See https://pypi.org/classifiers/ for a list of valid classifiers

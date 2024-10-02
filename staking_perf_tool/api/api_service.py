@@ -1,20 +1,12 @@
 import state as state
 from config import properties
 import requests
-from .jwt_token import create_jwt_token, verify_token, sign_with_private_key
 import json
 
-def send_staking_request(validator_count: int):
+def send_staking_request( data: dict, jwt_token: str):
     staking_request_url = f'{properties.BASE_URL}/v1/ethereum/validators'
-    data = {
-        'network': properties.NETWORK,
-        'fee_recipient_address': properties.FEE_RECIPIENT_ADDRESS,
-        'withdrawal_address': properties.WITHDRAWAL_ADDRESS,
-        'region': properties.REGION,
-        'validator_count': validator_count,
-        'client_req_id': 'perf_1'
-    }
-    jwt_token = create_jwt_token(data, 'v1/ethereum/validators')
+   
+   
     headers = {
     "Authorization": f"Bearer {jwt_token}",
     "Content-Type": "application/json"
@@ -36,9 +28,5 @@ bMSCyXfNVlPLJD630m0orDQv30cGVnFM/29u3wahiIB92SXN2ezVyvOQ4lqkmDqZ
 +Q+XuTZp3zRHDhtO6y/KF/MCAwEAAQ==
 -----END PUBLIC KEY-----
 """
-    print(verify_token(jwt_token,public_key))
-    print()
-    #response = requests.post(staking_request_url, data=json.dumps(data), headers=headers )
-    #print(response.status_code)
-    #print(response.json())
-    state.hello()
+    response = requests.post(staking_request_url, data=json.dumps(data), headers=headers )
+    return (response.status_code, response.json())

@@ -1,4 +1,4 @@
-SAMPLE_SIZE = 100
+SAMPLE_SIZE = 10
 BASE_URL = 'http://internal-k8s-se-ingressl-21a056f180-1784084263.us-east-1.elb.amazonaws.com'
 NETWORK = 'holesky'
 FEE_RECIPIENT_ADDRESS = '0xF269BD3C7Ddb4AE6fF7Ff97424f25f59B2ca7231'
