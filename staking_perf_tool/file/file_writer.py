@@ -4,12 +4,14 @@ import pandas as pd
 from dataclasses import  asdict
 from datetime import datetime
 
-def generate_results(parent_folder:str, sub_folder:str, state: state.State, vaidator_count: int):
+def generate_results(parent_folder:str, sub_folder:str, state: state.State, vaidator_count: int, msgs_per_min: int = None):
     combined_path = os.path.join(parent_folder,'results' ,sub_folder)
     if not os.path.exists(combined_path):
         os.makedirs(combined_path)
     df = pd.DataFrame([asdict(obj) for obj in state.results])
     df['vaidator_count'] = vaidator_count
+    if msgs_per_min != None:
+        df['throughput'] = msgs_per_min
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     folder_name = os.path.join(combined_path, f'result_{timestamp}') 
     os.makedirs(folder_name)
