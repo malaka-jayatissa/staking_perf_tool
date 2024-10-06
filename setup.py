@@ -16,7 +16,8 @@ setup(
         "cryptography==42.0.8",
         "pandas==2.2.3",
         "matplotlib==3.9.2",
-        "httpx==0.27.2"
+        "httpx==0.27.2",
+        "typer==0.12.3"
     ],
     classifiers=[
         # See https://pypi.org/classifiers/ for a list of valid classifiers
