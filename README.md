@@ -1,1 +1,1 @@
-Perf tool for staking enigine endpoints
+Perf tool for staking enigine endpoints and stats generation
