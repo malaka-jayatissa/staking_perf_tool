@@ -46,7 +46,7 @@ async def send_staking_requests_async(data:dict, jwt_token: str, index: int):
     result = await api.send_staking_request_async(data, jwt_token )
     end_time = time.time()
     local_time = time.localtime(end_time)
-    print(f'Ended Processing msg {index} at time {time.strftime("%y%m%d %H%M%S", local_time)}.{int((end_time - int(end_time)) * 1000)}')
+    #print(f'Ended Processing msg {index} at time {time.strftime("%y%m%d %H%M%S", local_time)}.{int((end_time - int(end_time)) * 1000)}')
     result_obj = state.Result(result[0], result[1], end_time-start_time)
     state.STATE.add_result(index,result_obj)
 
