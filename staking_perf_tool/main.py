@@ -25,6 +25,8 @@ def latency(validator_count: int):
     }
     jwt_token = api.create_jwt_token(data, 'v1/ethereum/validators')
 
+
+    print(jwt_token)
     for i in range(properties.SAMPLE_SIZE):
         data_copy = data.copy()
         data_copy['client_req_id'] = f'{data["client_req_id"]}_{i}'

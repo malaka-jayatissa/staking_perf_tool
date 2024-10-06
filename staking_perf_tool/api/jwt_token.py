@@ -8,7 +8,7 @@ import hashlib
 import uuid
 import time
 import jwt
-
+from cryptography.hazmat.primitives import serialization
 def base64url_encode(data):
     return  base64.urlsafe_b64encode(data).replace(b"=", b"")
 

@@ -1,0 +1,11 @@
+return_code,payload,latency,vaidator_count
+401,"{'client_req_id': None, 'errors': [{'code': 4002, 'error': 'Signature verification failed'}]}",0.2832472324371338,1
+401,"{'client_req_id': None, 'errors': [{'code': 4002, 'error': 'Signature verification failed'}]}",0.21272873878479004,1
+401,"{'client_req_id': None, 'errors': [{'code': 4002, 'error': 'Signature verification failed'}]}",0.21412396430969238,1
+401,"{'client_req_id': None, 'errors': [{'code': 4002, 'error': 'Signature verification failed'}]}",0.21498727798461914,1
+401,"{'client_req_id': None, 'errors': [{'code': 4002, 'error': 'Signature verification failed'}]}",0.37370800971984863,1
+401,"{'client_req_id': None, 'errors': [{'code': 4002, 'error': 'Signature verification failed'}]}",0.21810317039489746,1
+401,"{'client_req_id': None, 'errors': [{'code': 4002, 'error': 'Signature verification failed'}]}",0.21608829498291016,1
+401,"{'client_req_id': None, 'errors': [{'code': 4002, 'error': 'Signature verification failed'}]}",0.21399760246276855,1
+401,"{'client_req_id': None, 'errors': [{'code': 4002, 'error': 'Signature verification failed'}]}",0.21549606323242188,1
+401,"{'client_req_id': None, 'errors': [{'code': 4002, 'error': 'Signature verification failed'}]}",0.21558547019958496,1
